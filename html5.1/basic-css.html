@@ -5,6 +5,7 @@
     <title>About Me</title>
     <style>
       header, nav, main, footer {
+        font-family: monospace;
         background-color: limegreen;
         color: white; /* text color */
         padding: 20px; /* space bw border, content */
@@ -46,6 +47,16 @@
         border: 1px solid black;
         margin-top: -390px;
       }
+      .offscreen {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        }
     </style>
   </head>
 
@@ -57,7 +68,7 @@
     </header>
     <nav>
       <!-- you should hide this heading below! -->
-      <h2>page content</h2>
+      <h2 class="offscreen">page content</h2>
       <ul>
         <li><a href="#study">study</a></li>
         <li><a href="#work">work</a></li>
@@ -82,7 +93,7 @@
         <p>i love watching movies, reading, documentaries and learning new things</p>
       </section>
       <aside id="#info">
-        <h3>some info</h3>
+        <h3 class="offscreen">some info</h3>
         <p>egypt lies in the far north-east of africa, it's called the center of the old world</p>
         <section id="#contact">
           <h3>contact</h3>
